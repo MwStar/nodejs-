@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>基于nodejs cheerio的小爬虫</title>
+</head>
+<body>
+	<h1>基于nodejs cheerio的小爬虫</h1>
+	<button id="action">动作片</button>
+
+	<script type="text/javascript" src="js/jquery.min.js"</script>
+	<script type="text/javascript">
+	var _tag=$('#action').text();
+		$('#action').click(function(){
+			$.ajax({
+				tag: _tag,
+				type: "GET",
+				dataType: "json",
+				url: "index.js"
+
+				success: function(data){
+					console.log(data);
+				}
+
+			})
+		})
+	</script>
+</body>
+</html>
